@@ -183,11 +183,6 @@ section h2 {
   text-decoration: underline;
 }
 
-.read-more:hover {
-  color: #ffcc00;
-}
-
-
 /* Struktur Organisasi */
 #organization {
     text-align: center;
@@ -708,4 +703,5 @@ footer button:hover {
     nav ul {
         flex-direction: column;
     }
+
 }
