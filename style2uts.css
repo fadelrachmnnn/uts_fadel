@@ -515,7 +515,7 @@ nav a.active {
   color: #8b0000;
 }
 
-/* ====== FORM ====== */
+/* FORM */
 .menfess-form {
   display: flex;
   flex-direction: column;
@@ -548,7 +548,7 @@ nav a.active {
   outline: none;
 }
 
-/* ====== BUTTON ====== */
+/* BUTTON */
 button {
   background-color: #ffcc00;
   color: #003366;
@@ -565,7 +565,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* ====== SOSIAL MEDIA ====== */
+/* SOSIAL MEDIA */
 .social-links {
   text-align: center;
   margin-top: 25px;
@@ -610,7 +610,7 @@ button:hover {
   margin-bottom: 40px;
 }
 
-/* ===== GRID ===== */
+/* GRID */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -657,7 +657,7 @@ button:hover {
   font-size: 14px;
 }
 
-/* ====== FOOTER ====== */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 15px;
@@ -669,7 +669,7 @@ footer {
 }
 
 
-/* --- Footer --- */
+/* Footer */
 footer {
     background-color: #003366;
     color: white;
@@ -694,7 +694,7 @@ footer button:hover {
     background-color: #ffe066;
 }
 
-/* --- Responsif --- */
+/* Responsif */
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
@@ -705,3 +705,4 @@ footer button:hover {
     }
 
 }
+
