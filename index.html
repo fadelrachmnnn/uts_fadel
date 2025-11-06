@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzzcool - Kelas 5B Angkatan 2023</title>
+    <link rel="stylesheet" href="style2uts.css">
+    <link rel="icon" type="image/png" href="buzzcool.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION  -->
+    <header>
+        <h1>Buzzcool</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="member.html">Member</a></li>
+                <li><a href="jadwal.html">Schedule</a></li>
+                <li><a href="gallery.html">Galerry</a></li>
+                <li><a href="menfess.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- Section: Home -->
+        <section id="home">
+            <h2>Selamat Datang di Website Buzzcool</h2>
+            <p>Website resmi Kelas 5B Angkatan 2023 – Jurusan Ilmu Perpustakaan. 
+            Platform ini menjadi pusat informasi, dokumentasi kegiatan, dan komunikasi antar mahasiswa serta dosen wali.</p>
+        </section>
+
+        <!-- Section: Profil Kelas -->
+        <section id="about">
+            <h2>Profil Kelas Buzzcool</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>Nama Kelas:</strong> Buzzcool</p>
+                    <p><strong>Angkatan:</strong> 2023</p>
+                    <p><strong>Jurusan:</strong> Ilmu Perpustakaan</p>
+                    Buzzcool adalah sekelompok mahasiswa jurusan Ilmu Perpustakaan yang dikenal solid, kreatif, dan aktif baik di kegiatan akademik maupun sosial.
+                    <span id="dots">...</span>
+                    <span id="more" style="display:none;">
+                        Website ini berfungsi sebagai wadah dokumentasi, komunikasi, dan kolaborasi antar anggota kelas.  
+                        <br><br>
+                        Lihat keseruan para member buzzcool yang keren-keren lebih lanjut di instagram kami:  
+                        <a href="https://www.instagram.com/buzzcoolofc" target="_blank">@buzzcoolofc</a>
+                    </span>
+                    </p>
+
+                    <button id="readMoreBtn" class="read-more">Lihat Selengkapnya</button>
+                </div>
+                <div class="about-image">
+                    <img src="buzzcoolfotbar.jpg" alt="Foto Kelas Buzzcool 5B">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Struktur Organisasi -->
+        <section id="organization">
+            <h2>Struktur Organisasi Kelas Buzzcool 5B</h2>
+            <div class="org-grid">
+                <div class="org-card">
+                    <img src="fadell.jpg" alt="Ketua Kelas">
+                    <h3>Ketua Kelas</h3>
+                    <p>Fadel Rachman</p>
+                </div>
+                <div class="org-card">
+                    <img src="erge 2.jpg" alt="Wakil Ketua">
+                    <h3>Wakil Ketua</h3>
+                    <p>Air Langga Wijaya</p>
+                </div>
+                <div class="org-card">
+                    <img src="Screenshot 2025-10-20 190705.png" alt="Sekretaris">
+                    <h3>Sekretaris</h3>
+                    <p>Narjasul Aisyi</p>
+                </div>
+                <div class="org-card">
+                    <img src="Screenshot 2025-10-20 191549.png" alt="Bendahara">
+                    <h3>Bendahara</h3>
+                    <p>Annisa Nursetia Jelia</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Buzzcool - Kelas B Angkatan 2023 | Jurusan Ilmu Perpustakaan</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Efek hover pada kartu struktur organisasi
+        const orgCards = document.querySelectorAll(".org-card");
+
+        orgCards.forEach(card => {
+            card.addEventListener("mouseenter", () => {
+                card.style.transform = "scale(1.05)";
+                card.style.transition = "transform 0.3s ease";
+                card.style.boxShadow = "0 8px 15px rgba(0, 0, 0, 0.3)";
+            });
+            card.addEventListener("mouseleave", () => {
+                card.style.transform = "scale(1)";
+                card.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+            });
+        });
+
+        // Tombol kembali ke atas
+        const scrollBtn = document.createElement("button");
+        scrollBtn.id = "scrollTopBtn";
+        scrollBtn.textContent = "⬆️";
+        scrollBtn.title = "Kembali ke atas";
+        Object.assign(scrollBtn.style, {
+            display: "none",
+            position: "fixed",
+            bottom: "20px",
+            right: "25px",
+            backgroundColor: "#ffcc00",
+            color: "#000",
+            border: "none",
+            borderRadius: "50%",
+            width: "45px",
+            height: "45px",
+            cursor: "pointer",
+            fontSize: "20px",
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+            transition: "all 0.3s ease",
+            zIndex: "999"
+        });
+
+        document.body.appendChild(scrollBtn);
+
+        window.addEventListener("scroll", () => {
+            scrollBtn.style.display = window.scrollY > 250 ? "block" : "none";
+        });
+
+        scrollBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+        // Lihat selengkapnya
+        const btn = document.getElementById("readMoreBtn");
+        const dots = document.getElementById("dots");
+        const more = document.getElementById("more");
+
+        btn.addEventListener("click", () => {
+          if (more.style.display === "none") {
+            more.style.display = "inline";
+            dots.style.display = "none";
+            btn.textContent = "Sembunyikan";
+          } else {
+            more.style.display = "none";
+            dots.style.display = "inline";
+            btn.textContent = "Lihat Selengkapnya";
+          }
+        });
+    </script>
+
+    
+
+</body>
+</html>

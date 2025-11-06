@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Member - Buzzcool 5B</title>
+    <link rel="stylesheet" href="style2uts.css">
+    <link rel="icon" type="image/png" href="buzzcool.jpg">
+</head>
+
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <h1>Buzzcool</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="member.html" class="active">Member</a></li>
+                <li><a href="jadwal.html">Schedule</a></li>
+                <li><a href="gallery.html">Galerry</a></li>
+                <li><a href="menfess.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- TABEL -->
+        <section id="member">
+            <h2>Daftar Anggota Kelas Buzzcool 5B</h2>
+            <p>Berikut daftar mahasiswa kelas 5B Angkatan 2023 Jurusan Ilmu Perpustakaan.</p>
+
+            <div class="table-container">
+                <table class="member-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Lengkap</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Muhammad Dava Mahesyah Putra Salim</td></tr>
+                        <tr><td>2</td><td>Radella Azzahra</td></tr>
+                        <tr><td>3</td><td>Rifqah Zaina Afifah</td></tr>
+                        <tr><td>4</td><td>Rizka Amelia</td></tr>
+                        <tr><td>5</td><td>Rizkina Khairrunisa</td></tr>
+                        <tr><td>6</td><td>Siti Sunenah</td></tr>
+                        <tr><td>7</td><td>Alfandy Ramadhan</td></tr>
+                        <tr><td>8</td><td>Amanda Rahma Alya</td></tr>
+                        <tr><td>9</td><td>Aulia Ramadani Setiawan Putri</td></tr>
+                        <tr><td>10</td><td>Dinda Triana Silvania</td></tr>
+                        <tr><td>11</td><td>Diva Nazva Savitri</td></tr>
+                        <tr><td>12</td><td>Enggar Asih Indarisnan</td></tr>
+                        <tr><td>13</td><td>Fitriah Dewi Setiany</td></tr>
+                        <tr><td>14</td><td>Nabilla Oktavianisa</td></tr>
+                        <tr><td>15</td><td>Nahla Hawa Hayatunnufus</td></tr>
+                        <tr><td>16</td><td>Narjasul Aisyi</td></tr>
+                        <tr><td>17</td><td>Assami Putri Bayina</td></tr>
+                        <tr><td>18</td><td>Aulia Zahra</td></tr>
+                        <tr><td>19</td><td>Nurul Fitriani</td></tr>
+                        <tr><td>20</td><td>Fadel Rachman</td></tr>
+                        <tr><td>21</td><td>Raja Ardiansyah Siregar</td></tr>
+                        <tr><td>22</td><td>Rizky Bayu Aji Saputro</td></tr>
+                        <tr><td>23</td><td>Rahma Nurhidayah</td></tr>
+                        <tr><td>24</td><td>Nur Naila Rinta</td></tr>
+                        <tr><td>25</td><td>Putri Dwiyanti</td></tr>
+                        <tr><td>26</td><td>Annisa Nursetia Jelia</td></tr>
+                        <tr><td>27</td><td>Desty Arviani Salsabila</td></tr>
+                        <tr><td>28</td><td>Aida Zahra</td></tr>
+                        <tr><td>29</td><td>Air Langga Wijaya</td></tr>
+                        <tr><td>30</td><td>Alfina Damayanti</td></tr>
+                        <tr><td>31</td><td>Alisya Syahara Dirham</td></tr>
+                        <tr><td>32</td><td>Dhea Pricilla Altamira</td></tr>                             
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Buzzcool - Kelas 5B Angkatan 2023 | Jurusan Ilmu Perpustakaan</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Efek hover pada kartu struktur organisasi
+        const orgCards = document.querySelectorAll(".org-card");
+
+        orgCards.forEach(card => {
+            card.addEventListener("mouseenter", () => {
+                card.style.transform = "scale(1.05)";
+                card.style.transition = "transform 0.3s ease";
+                card.style.boxShadow = "0 8px 15px rgba(0, 0, 0, 0.3)";
+            });
+            card.addEventListener("mouseleave", () => {
+                card.style.transform = "scale(1)";
+                card.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+            });
+        });
+
+        // Tombol kembali ke atas
+        const scrollBtn = document.createElement("button");
+        scrollBtn.id = "scrollTopBtn";
+        scrollBtn.textContent = "⬆️";
+        scrollBtn.title = "Kembali ke atas";
+        Object.assign(scrollBtn.style, {
+            display: "none",
+            position: "fixed",
+            bottom: "20px",
+            right: "25px",
+            backgroundColor: "#ffcc00",
+            color: "#000",
+            border: "none",
+            borderRadius: "50%",
+            width: "45px",
+            height: "45px",
+            cursor: "pointer",
+            fontSize: "20px",
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+            transition: "all 0.3s ease",
+            zIndex: "999"
+        });
+
+        document.body.appendChild(scrollBtn);
+
+        window.addEventListener("scroll", () => {
+            scrollBtn.style.display = window.scrollY > 250 ? "block" : "none";
+        });
+
+        scrollBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>

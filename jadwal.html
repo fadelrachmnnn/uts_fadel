@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Kuliah - Buzzcool 5B</title>
+    <link rel="stylesheet" href="style2uts.css">
+    <link rel="icon" type="image/png" href="buzzcool.jpg">
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <h1>Buzzcool</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="member.html">Member</a></li>
+                <li><a href="jadwal.html" class="active">Schedule</a></li>
+                <li><a href="gallery.html">Galerry</a></li>
+                <li><a href="menfess.html">Menfess</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+  <!-- JADWAL -->
+  <section id="schedule">
+    <h2>Buzzcool'23 Schedules</h2>
+    <div class="window">
+      <div class="window-header">
+        <div class="title">Semester 5 Schedule</div>
+      </div>
+
+      <div class="schedule-container">
+        <!-- Monday -->
+        <div class="day-box">
+          <h3>Monday!</h3>
+          <ul>
+            <li>Metode Penelitian Kuantitatif<br><span>(07.30 - 10.00 Ruang 104)</span></li>
+            <li>Pengembangan Web<br><span>(10.01 - 12.30 Ruang 204)</span></li>
+            <li>Indeks dan Abstrak<br><span>(13.51 - 16.20 Ruang 105)</span></li>
+          </ul>
+        </div>
+
+        <!-- Tuesday -->
+        <div class="day-box">
+          <h3>Tuesday!</h3>
+          <ul>
+            <li>Pencarian Informasi dan Layanan Rujukan<br><span>(07.30 - 10.00 Ruang 104)</span></li>
+            <li>Metode Penelitian Kualitatif<br><span>(10.01 - 11.40 Ruang 104)</span></li>
+          </ul>
+        </div>
+
+        <!-- Friday -->
+        <div class="day-box">
+          <h3>Friday!</h3>
+          <ul>
+            <li>Sistem Otomasi Perpustakaan<br><span>(08.21 - 10.50 Ruang 204)</span></li>
+            <li>Digital Marketing<br><span>(14.41 - 16.20 Ruang 105)</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Buzzcool - Kelas 5B Angkatan 2023 | Jurusan Ilmu Perpustakaan</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Efek hover pada kartu struktur organisasi
+        const orgCards = document.querySelectorAll(".org-card");
+
+        orgCards.forEach(card => {
+            card.addEventListener("mouseenter", () => {
+                card.style.transform = "scale(1.05)";
+                card.style.transition = "transform 0.3s ease";
+                card.style.boxShadow = "0 8px 15px rgba(0, 0, 0, 0.3)";
+            });
+            card.addEventListener("mouseleave", () => {
+                card.style.transform = "scale(1)";
+                card.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+            });
+        });
+
+        // Tombol kembali ke atas
+        const scrollBtn = document.createElement("button");
+        scrollBtn.id = "scrollTopBtn";
+        scrollBtn.textContent = "⬆️";
+        scrollBtn.title = "Kembali ke atas";
+        Object.assign(scrollBtn.style, {
+            display: "none",
+            position: "fixed",
+            bottom: "20px",
+            right: "25px",
+            backgroundColor: "#ffcc00",
+            color: "#000",
+            border: "none",
+            borderRadius: "50%",
+            width: "45px",
+            height: "45px",
+            cursor: "pointer",
+            fontSize: "20px",
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+            transition: "all 0.3s ease",
+            zIndex: "999"
+        });
+
+        document.body.appendChild(scrollBtn);
+
+        window.addEventListener("scroll", () => {
+            scrollBtn.style.display = window.scrollY > 250 ? "block" : "none";
+        });
+
+        scrollBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+</body>
+</html>

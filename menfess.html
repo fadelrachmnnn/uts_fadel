@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menfess - Buzzcool 5B</title>
+  <link rel="stylesheet" href="style2uts.css">
+  <link rel="icon" type="image/png" href="buzzcool.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+  <header>
+    <h1>Buzzcool</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="member.html">Member</a></li>
+        <li><a href="jadwal.html">Schedule</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="menfess.html" class="active">Menfess</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MENFESS SECTION -->
+  <main>
+    <section id="menfess">
+      <h2>Kirim Menfess untuk Buzzcool!</h2>
+      <p>Kamu bisa mengirim pesan anonim untuk teman, kelas, atau siapa pun di Buzzcool 5B.  
+      Semua pesan bersifat <strong>rahasia</strong> dan tidak akan menampilkan identitas pengirim 😎.</p>
+
+      <form class="menfess-form">
+        <label for="nama">Nama (Opsional)</label>
+        <input type="text" id="nama" name="nama" placeholder="Boleh dikosongkan jika ingin anonim">
+
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis menfess kamu di sini..." required></textarea>
+
+        <button type="submit">Kirim Menfess 💌</button>
+      </form>
+
+      <div class="social-links">
+        <p>Ikuti update terbaru di:</p>
+        <a href="https://www.instagram.com/buzzcoolofc?igsh=MWU4cW1nd3l3dDJlYQ==" target="_blank"><i class="fa-brands fa-instagram"></i> @buzzcoolofc</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Buzzcool - Kelas 5B Angkatan 2023 | Jurusan Ilmu Perpustakaan</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const form = document.querySelector(".menfess-form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Menfess kamu sudah terkirim secara anonim! 💫");
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
